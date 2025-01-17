@@ -9,6 +9,8 @@ Loophole installed and logged in locally via `loophole account login` to snag th
 # Usage
 Make sure you pick the image with the correct platform for your host!
 
+You can modify the example provided here to fit your needs.
+
 _docker-compose.yml_
 ```
 version: '3'
@@ -25,7 +27,7 @@ services:
       - "8000:8000"
 
   loophole:
-    image: ekimiadocker/loophole:1.0.0-beta.15_linux_arm64
+    image: gmanthemarioguy/loophole:1.0.0-beta.15_linux_arm64
     restart: on-failure
     network_mode: service:api-service
     depends_on:
